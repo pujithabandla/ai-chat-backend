@@ -26,6 +26,9 @@ class ChatRequest(BaseModel):
 def home():
     return {"message": "Backend is live"}
 
+@app.get("/")
+def home():
+    return {"message": "Backend is live 🚀"}
 @app.post("/chat")
 def chat(req: ChatRequest):
     try:
